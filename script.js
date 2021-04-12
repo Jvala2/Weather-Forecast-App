@@ -109,11 +109,12 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
 
 
                 //Forecast image
-
+/*
                 var img2 = document.querySelector("imgW2")
-                var tempimg2 = data['weather'][0]['icon']
-                img2.innerHTML = "http://openweathermap.org/img/w/" +tempimg2+ ".png' alt='Icon depicting current weather.'>"
                 console.log(data);
+                var tempimg2 = data['weather'][0]['icon']
+                console.log(data);
+                img2.innerHTML = "http://openweathermap.org/img/w/" +tempimg2+ ".png' alt='Icon depicting current weather.'>"
 
 
                 var img3 = document.querySelector("imgW3")
@@ -132,7 +133,7 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
                 var tempimg6 = data['weather'][4]['icon']
                 img6.innerHTML = "http://openweathermap.org/img/w/" +tempimg6+ ".png' alt='Icon depicting current weather.'>"
 
-
+*/
 
                 //Forecast humidity
 
