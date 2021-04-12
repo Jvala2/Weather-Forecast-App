@@ -34,13 +34,6 @@ var API_KEY="ecdbd9523e9e6a5a78ae5d731dee3481";
 document.getElementById("cityForm").addEventListener("submit",function(event) {
     event.preventDefault();
 
-
-
-
-
-
-
-
     var cityName=document.getElementById("cityNameInput").value;
     if(!cityName) {
         alert("Please enter the name of a city.");
@@ -174,11 +167,3 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
 })
 
 //This passes the searched city onto this list of clickable buttons
-/*
-button.addEventListener("click", function() {
-    var li = document.createElement("li");
-    li.classList.add("list-group-item");
-    li.appendChild(document.createTextNode(input.value));
-    ul.appendChild(li);
-    input.value = "";
-}) */
