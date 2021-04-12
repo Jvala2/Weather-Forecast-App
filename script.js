@@ -73,40 +73,48 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
                 console.log(data);
 
                 document.getElementById("currentUV").innerText=data.current.uvi;
+                var uvColor=data.current.uvi;
+                if (uvColor <=2) {document.getElementById("currentUV").style.backgroundColor="#349721";
+                } else if (uvColor <=5) {document.getElementById("currentUV").style.backgroundColor="#fff400";
+                } else if (uvColor <=7) {document.getElementById("currentUV").style.backgroundColor="#ff9a00";
+                } else if (uvColor <=10) {document.getElementById("currentUV").style.backgroundColor="#ff0000";
+                } else {document.getElementById("currentUV").style.backgroundColor="#7c00ff";
+                }
 
 
                 //Forecast Temperature
 
-                document.getElementById("temp2").innerText=farenheit2
                 var kelvin2=data.daily[0].temp.day;
+                console.log(kelvin2)
                 var celsius2 = kelvin2 -273.15;
                 var farenheit2 = celsius2 * (9/5) + 32;
                 farenheit2 = Math.floor(farenheit2);
+                document.getElementById("temp2").innerText=farenheit2
 
-                document.getElementById("temp3").innerText=farenheit3
                 var kelvin3=data.daily[1].temp.day;
+                console.log(kelvin3)
                 var celsius3 = kelvin3 -273.15;
                 var farenheit3 = celsius3 * (9/5) + 32;
                 farenheit3 = Math.floor(farenheit3);
+                document.getElementById("temp3").innerText=farenheit3
 
-                document.getElementById("temp4").innerText=farenheit4
                 var kelvin4=data.daily[2].temp.day;
                 var celsius4 = kelvin4 -273.15;
                 var farenheit4 = celsius4 * (9/5) + 32;
                 farenheit4 = Math.floor(farenheit4);
+                document.getElementById("temp4").innerText=farenheit4
 
-                document.getElementById("temp5").innerText=farenheit5
                 var kelvin5=data.daily[3].temp.day;
                 var celsius5 = kelvin5 -273.15;
                 var farenheit5 = celsius5 * (9/5) + 32;
                 farenheit5 = Math.floor(farenheit5);
+                document.getElementById("temp5").innerText=farenheit5
 
-                document.getElementById("temp6").innerText=farenheit6
                 var kelvin6=data.daily[4].temp.day;
                 var celsius6 = kelvin6 -273.15;
                 var farenheit6 = celsius6 * (9/5) + 32;
                 farenheit6 = Math.floor(farenheit6);
-
+                document.getElementById("temp6").innerText=farenheit6
 
                 //Forecast image
 /*
