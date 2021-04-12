@@ -84,25 +84,25 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
                 farenheit2 = Math.floor(farenheit2);
 
                 document.getElementById("temp3").innerText=farenheit3
-                var kelvin3=data.daily[0].temp.day;
+                var kelvin3=data.daily[1].temp.day;
                 var celsius3 = kelvin3 -273.15;
                 var farenheit3 = celsius3 * (9/5) + 32;
                 farenheit3 = Math.floor(farenheit3);
 
                 document.getElementById("temp4").innerText=farenheit4
-                var kelvin4=data.daily[0].temp.day;
+                var kelvin4=data.daily[2].temp.day;
                 var celsius4 = kelvin4 -273.15;
                 var farenheit4 = celsius4 * (9/5) + 32;
                 farenheit4 = Math.floor(farenheit4);
 
                 document.getElementById("temp5").innerText=farenheit5
-                var kelvin5=data.daily[0].temp.day;
+                var kelvin5=data.daily[3].temp.day;
                 var celsius5 = kelvin5 -273.15;
                 var farenheit5 = celsius5 * (9/5) + 32;
                 farenheit5 = Math.floor(farenheit5);
 
                 document.getElementById("temp6").innerText=farenheit6
-                var kelvin6=data.daily[0].temp.day;
+                var kelvin6=data.daily[4].temp.day;
                 var celsius6 = kelvin6 -273.15;
                 var farenheit6 = celsius6 * (9/5) + 32;
                 farenheit6 = Math.floor(farenheit6);
@@ -113,21 +113,23 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
                 var img2 = document.querySelector("imgW2")
                 var tempimg2 = data['weather'][0]['icon']
                 img2.innerHTML = "http://openweathermap.org/img/w/" +tempimg2+ ".png' alt='Icon depicting current weather.'>"
+                console.log(data);
+
 
                 var img3 = document.querySelector("imgW3")
-                var tempimg3 = data['weather'][0]['icon']
+                var tempimg3 = data['weather'][1]['icon']
                 img3.innerHTML = "http://openweathermap.org/img/w/" +tempimg3+ ".png' alt='Icon depicting current weather.'>"
 
                 var img4 = document.querySelector("imgW4")
-                var tempimg4 = data['weather'][0]['icon']
+                var tempimg4 = data['weather'][2]['icon']
                 img4.innerHTML = "http://openweathermap.org/img/w/" +tempimg4+ ".png' alt='Icon depicting current weather.'>"
 
                 var img5 = document.querySelector("imgW5")
-                var tempimg5 = data['weather'][0]['icon']
+                var tempimg5 = data['weather'][3]['icon']
                 img5.innerHTML = "http://openweathermap.org/img/w/" +tempimg5+ ".png' alt='Icon depicting current weather.'>"
 
                 var img6 = document.querySelector("imgW6")
-                var tempimg6 = data['weather'][0]['icon']
+                var tempimg6 = data['weather'][4]['icon']
                 img6.innerHTML = "http://openweathermap.org/img/w/" +tempimg6+ ".png' alt='Icon depicting current weather.'>"
 
 
