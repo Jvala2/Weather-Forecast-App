@@ -36,6 +36,7 @@ aside {
     border-radius: 0;
     border-bottom: 10px solid black;
     flex:auto;
+    position:relative;
 }
 .future {
     display: flex;

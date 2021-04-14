@@ -65,6 +65,7 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
             }).then(function(data) {
                 console.log(data);
 
+                //uvi color and number
                 document.getElementById("currentUV").innerText=data.current.uvi;
                 var uvColor=data.current.uvi;
                 if (uvColor <=2) {document.getElementById("currentUV").style.backgroundColor="#349721";
