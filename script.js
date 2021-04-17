@@ -150,26 +150,28 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
 
             
 
-            var kelvin=data.main.temp;
+            var kelvin = data.daily[0].temp.day
             var celsius = kelvin -273.15;
             var farenheit = celsius * (9/5) + 32;
             farenheit = Math.floor(farenheit);
 
             document.getElementById("currentTemperature").innerText=farenheit;
-            document.getElementById("currentHumidity").innerText=data.main.humidity;
-            document.getElementById("currentWind").innerText=data.wind.speed;
+            document.getElementById("currentHumidity").innerText=data.daily[0].humidity;
+            document.getElementById("currentWind").innerText=data.daily[0].wind_speed;
 
 
             //Get weather pic
  
             weather2=data.daily[0].weather.main;
-                if (weather2 = "Clouds") {
-            var cloud;
+            weather2="Clouds";
+                if (weather2 == "Clouds") {
+            var cloud = document.createElement("img");
             cloud.src = "assets/cloud.jpg";
+            cloud.setAttribute("src", "assets/cloud.jpg");
             var src = document.getElementById("imgW2");
             src.appendChild(cloud);
-            } else if (weather2 = "Rain") {
-            var rain;
+            } else if (weather2 == "Rain") {
+            var rain = document.createElement("img");
             rain.src = "assets/rain.jpg";
             var src = document.getElementById("imgW2");
             src.appendChild(rain);
