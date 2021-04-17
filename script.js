@@ -165,11 +165,8 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
             weather2=data.daily[0].weather.main;
             weather2="Clouds";
                 if (weather2 == "Clouds") {
-            var cloud = document.createElement("img");
-            cloud.src = "assets/cloud.jpg";
-            cloud.setAttribute("src", "assets/cloud.jpg");
-            var src = document.getElementById("imgW2");
-            src.appendChild(cloud);
+                    var item = document.getElementById("imgW2");
+                    item.setAttribute("src", "assets/cloud.jpg")
             } else if (weather2 == "Rain") {
             var rain = document.createElement("img");
             rain.src = "assets/rain.jpg";
