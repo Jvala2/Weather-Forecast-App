@@ -36,7 +36,7 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
 
     var cityName=document.getElementById("cityNameInput").value;
     if(!cityName) {
-        alert("Please enter the name of a city.");
+        document.getElementById("cityName").innerText="Not a valid city"
     } else {
         document.getElementById("cityName").innerText=cityName;
 
@@ -44,7 +44,7 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
 
         fetch(requestUrl).then(function(response) {
             if(!response.ok) {
-                alert("No information found for "+cityName+"");
+                document.getElementById("cityName").innerText="Not a valid city";
             } 
             return response.json();
             
@@ -161,11 +161,23 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
 
 
             //Get weather pic
-            document.getElementById("hum2").innerText=data.daily[0].weather.main;
-            document.getElementById("hum3").innerText=data.daily[1].weather.main;
-            document.getElementById("hum4").innerText=data.daily[2].weather.main;
-            document.getElementById("hum5").innerText=data.daily[3].weather.main;
-            document.getElementById("hum6").innerText=data.daily[4].weather.main;
+
+            var weather2=data.daily[0].weather.main;
+                if (weather2 = "Clouds")
+            var cloud;
+            cloud.src2 = "assets/cloud.jpg";
+            var src2 = document.getElementById("header");
+            src2.appendChild(cloud);
+
+            // Clear Rain Clouds Snow
+
+
+
+            document.getElementById("imgW2").innerText=data.daily[0].weather.main;
+            document.getElementById("imgW3").innerText=data.daily[1].weather.main;
+            document.getElementById("imgW4").innerText=data.daily[2].weather.main;
+            document.getElementById("imgW5").innerText=data.daily[3].weather.main;
+            document.getElementById("imgW6").innerText=data.daily[4].weather.main;
 
             
 
