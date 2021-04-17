@@ -148,7 +148,7 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
 
 
 
-            });
+            
 
             var kelvin=data.main.temp;
             var celsius = kelvin -273.15;
@@ -162,7 +162,8 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
 
             //Get weather pic
 
-            var weather2=data.daily[0].weather.main;
+            var weather2
+            weather2=data.daily[0].weather.main;
                 if (weather2 = "Clouds") {
             var cloud;
             cloud.src = "assets/cloud.jpg";
@@ -296,7 +297,7 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
             document.getElementById("imgW5").innerText=data.daily[3].weather.main;
             document.getElementById("imgW6").innerText=data.daily[4].weather.main;
 
-            
+        });            
 
 
         })
