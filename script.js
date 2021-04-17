@@ -160,6 +160,15 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
             document.getElementById("currentWind").innerText=data.wind.speed;
 
 
+            //Get weather pic
+            document.getElementById("hum2").innerText=data.daily[0].weather.main;
+            document.getElementById("hum3").innerText=data.daily[1].weather.main;
+            document.getElementById("hum4").innerText=data.daily[2].weather.main;
+            document.getElementById("hum5").innerText=data.daily[3].weather.main;
+            document.getElementById("hum6").innerText=data.daily[4].weather.main;
+
+            
+
 
         })
         
