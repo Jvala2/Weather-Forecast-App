@@ -161,8 +161,7 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
 
 
             //Get weather pic
-
-            var weather2
+ 
             weather2=data.daily[0].weather.main;
                 if (weather2 = "Clouds") {
             var cloud;
