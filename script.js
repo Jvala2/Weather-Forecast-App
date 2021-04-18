@@ -256,4 +256,4 @@ $(document).on("click", ".returnBtn", function (event) {
     console.log(event.target);
     console.log($(this).parent().text().split("Previous")[0]);
     var cityName = $(this).parent().text().split("Previous")[0];
-});
+  });
