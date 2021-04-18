@@ -282,4 +282,5 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
 $(document).on("click",".returnBtn",function(event2){
     $(event2);
     document.getElementById("cityNameInput").innerText = cityListEl;
+    then.function(event);
   });
