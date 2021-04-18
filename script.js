@@ -41,7 +41,7 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
       );
       cityListItemEl.text(cityItem);
       cityListEl.append(cityListItemEl);
-
+      localStorage.setItem("cityForm", cityItem)
     var cityName=document.getElementById("cityNameInput").value;
     if(!cityName) {
         document.getElementById("cityName").innerText="Not a valid city"
