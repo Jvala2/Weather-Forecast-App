@@ -120,33 +120,6 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
                 farenheit6 = Math.floor(farenheit6);
                 document.getElementById("temp6").innerText=farenheit6
 
-                //Forecast image
-/*
-                var img2 = document.querySelector("imgW2")
-                console.log(data);
-                var tempimg2 = data['weather'][0]['icon']
-                console.log(data);
-                img2.innerHTML = "http://openweathermap.org/img/w/" +tempimg2+ ".png' alt='Icon depicting current weather.'>"
-
-
-                var img3 = document.querySelector("imgW3")
-                var tempimg3 = data['weather'][1]['icon']
-                img3.innerHTML = "http://openweathermap.org/img/w/" +tempimg3+ ".png' alt='Icon depicting current weather.'>"
-
-                var img4 = document.querySelector("imgW4")
-                var tempimg4 = data['weather'][2]['icon']
-                img4.innerHTML = "http://openweathermap.org/img/w/" +tempimg4+ ".png' alt='Icon depicting current weather.'>"
-
-                var img5 = document.querySelector("imgW5")
-                var tempimg5 = data['weather'][3]['icon']
-                img5.innerHTML = "http://openweathermap.org/img/w/" +tempimg5+ ".png' alt='Icon depicting current weather.'>"
-
-                var img6 = document.querySelector("imgW6")
-                var tempimg6 = data['weather'][4]['icon']
-                img6.innerHTML = "http://openweathermap.org/img/w/" +tempimg6+ ".png' alt='Icon depicting current weather.'>"
-
-*/
-
                 //Forecast humidity
 
                 document.getElementById("hum2").innerText=data.daily[0].humidity;
