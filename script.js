@@ -40,6 +40,9 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
         '<li class="flex-row justify-space-between align-center p-2 bg-light text-dark">'
       );
       cityListItemEl.text(cityName);
+      cityListItemEl.append(
+        '<button class="btn btn-danger btn-small returnBtn">Previous</button>'
+      );
       cityListEl.append(cityListItemEl);
       localStorage.setItem("cityForm", cityName)
     if(!cityName) {
@@ -275,4 +278,8 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
     
 })
 
-//This passes the searched city onto this list of clickable buttons
+
+$(document).on("click",".returnBtn",function(event2){
+    $(event2);
+    document.getElementById("cityNameInput").innerText = cityListEl;
+  });
