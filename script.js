@@ -27,12 +27,20 @@ document.getElementById("day4").innerText=day4;
 document.getElementById("day5").innerText=day5;
 document.getElementById("day6").innerText=day6;
 
+var cityListEl = $("#list-group");
+
 var API_KEY="ecdbd9523e9e6a5a78ae5d731dee3481";
 
 // "https://api.openweathermap.org/data/2.5/onecall?lat="+latitude+"&lon="+longitude+"&appid="+API_KEY+""
 
 document.getElementById("cityForm").addEventListener("submit",function(event) {
     event.preventDefault();
+    var cityItem = $('input[name="cityNameInput"]').val();
+    var cityListItemEl = $(
+        '<li class="flex-row justify-space-between align-center p-2 bg-light text-dark">'
+      );
+      cityListItemEl.text(cityItem);
+      cityListEl.append(cityListItemEl);
 
     var cityName=document.getElementById("cityNameInput").value;
     if(!cityName) {
