@@ -3,6 +3,20 @@
 
     Hourly wheather api? pro.openweathermap.org/data/2.5/forecast/hourly?q={city name}&appid={API key}
 */
+var storageArray = []
+storageArray= JSON.parse(localStorage.getItem("history"))
+var cityListEl = $("#list-group");
+for (var i = 0; i < storageArray.length; i++) {
+    var cityListItemEl = $(
+        '<li class="flex-row justify-space-between align-center p-2 bg-light text-dark">'
+      );
+      cityListItemEl.text(storageArray[i]);
+      cityListItemEl.append(
+        '<button class="btn btn-danger btn-small returnBtn">Previous</button>'
+      );
+      cityListEl.append(cityListItemEl);
+}
+
 
 var now;
 
@@ -27,24 +41,12 @@ document.getElementById("day4").innerText=day4;
 document.getElementById("day5").innerText=day5;
 document.getElementById("day6").innerText=day6;
 
-var cityListEl = $("#list-group");
+
 
 var API_KEY="ecdbd9523e9e6a5a78ae5d731dee3481";
 
 
-
-document.getElementById("cityForm").addEventListener("submit",function(event) {
-    event.preventDefault();
-    var cityName=document.getElementById("cityNameInput").value;
-    var cityListItemEl = $(
-        '<li class="flex-row justify-space-between align-center p-2 bg-light text-dark">'
-      );
-      cityListItemEl.text(cityName);
-      cityListItemEl.append(
-        '<button class="btn btn-danger btn-small returnBtn">Previous</button>'
-      );
-      cityListEl.append(cityListItemEl);
-      localStorage.setItem("cityForm", cityName)
+function showInput(cityName) {
     if(!cityName) {
         document.getElementById("cityName").innerText="Not a valid city"
     } else {
@@ -249,11 +251,22 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
         
     }
     
-})
+}
 
 
 $(document).on("click", ".returnBtn", function (event) {
     console.log(event.target);
     console.log($(this).parent().text().split("Previous")[0]);
     var cityName = $(this).parent().text().split("Previous")[0];
+    showInput(cityName)
   });
+
+document.getElementById("cityForm").addEventListener("submit",function(event) {
+    event.preventDefault();
+    var cityName=document.getElementById("cityNameInput").value;
+    //verify if the history array has the cityname
+    if (storageArray.indexOf(cityName) === -1) {
+        storageArray.push(cityName)
+        localStorage.setItem("history",JSON.stringify(storageArray))
+    }
+    showInput(cityName)})
