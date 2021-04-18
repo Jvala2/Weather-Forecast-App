@@ -39,9 +39,9 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
     var cityListItemEl = $(
         '<li class="flex-row justify-space-between align-center p-2 bg-light text-dark">'
       );
-      cityListItemEl.text(cityItem);
+      cityListItemEl.text(cityName);
       cityListEl.append(cityListItemEl);
-      localStorage.setItem("cityForm", cityItem)
+      localStorage.setItem("cityForm", cityName)
     var cityName=document.getElementById("cityNameInput").value;
     if(!cityName) {
         document.getElementById("cityName").innerText="Not a valid city"
