@@ -252,8 +252,8 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
 })
 
 
-$(document).on("click",".returnBtn",function(event2){
-    $(event2);
-    document.getElementById("cityNameInput").innerText = cityListEl;
-    then.function(event);
-  });
+$(document).on("click", ".returnBtn", function (event) {
+    console.log(event.target);
+    console.log($(this).parent().text().split("Previous")[0]);
+    var cityName = $(this).parent().text().split("Previous")[0];
+});
