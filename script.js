@@ -163,118 +163,82 @@ document.getElementById("cityForm").addEventListener("submit",function(event) {
             //Get weather pic
  
             weather2=data.daily[0].weather.main;
-            weather2="Clouds";
                 if (weather2 == "Clouds") {
                     var item = document.getElementById("imgW2");
                     item.setAttribute("src", "assets/cloud.jpg")
             } else if (weather2 == "Rain") {
-            var rain = document.createElement("img");
-            rain.src = "assets/rain.jpg";
-            var src = document.getElementById("imgW2");
-            src.appendChild(rain);
-            } else if (weather2 = "Snow") {
-            var snow;
-            snow.src = "assets/snow.jpg";
-            var src = document.getElementById("imgW2");
-            src.appendChild(snow);
+                var item = document.getElementById("imgW2");
+                item.setAttribute("src", "assets/rain.jpg")
+            } else if (weather2 == "Snow") {
+                var item = document.getElementById("imgW2");
+                item.setAttribute("src", "assets/snow.jpg")
             } else {
-            var clear;
-            clear.src = "assets/sun.jpg";
-            var src = document.getElementById("imgW2");
-            src.appendChild(snow);
+                var item = document.getElementById("imgW2");
+                item.setAttribute("src", "assets/sun.jpg")
             }
 
             var weather3=data.daily[1].weather.main;
-                if (weather3 = "Clouds") {
-            var cloud;
-            cloud.src = "assets/cloud.jpg";
-            var src = document.getElementById("imgW3");
-            src.appendChild(cloud);
-            } else if (weather3 = "Rain") {
-            var rain;
-            rain.src = "assets/rain.jpg";
-            var src = document.getElementById("imgW3");
-            src.appendChild(rain);
-            } else if (weather3 = "Snow") {
-            var snow;
-            snow.src = "assets/snow.jpg";
-            var src = document.getElementById("imgW3");
-            src.appendChild(snow);
+            if (weather3 == "Clouds") {
+                var item = document.getElementById("imgW3");
+                item.setAttribute("src", "assets/cloud.jpg")
+            } else if (weather3 == "Rain") {
+            var item = document.getElementById("imgW3");
+            item.setAttribute("src", "assets/rain.jpg")
+            } else if (weather3 == "Snow") {
+            var item = document.getElementById("imgW3");
+            item.setAttribute("src", "assets/snow.jpg")
             } else {
-            var clear;
-            clear.src = "assets/sun.jpg";
-            var src = document.getElementById("imgW3");
-            src.appendChild(snow);
+            var item = document.getElementById("imgW3");
+            item.setAttribute("src", "assets/sun.jpg")
             }
 
             var weather4=data.daily[2].weather.main;
-                if (weather4 = "Clouds") {
-            var cloud;
-            cloud.src = "assets/cloud.jpg";
-            var src = document.getElementById("imgW4");
-            src.appendChild(cloud);
-            } else if (weather4 = "Rain") {
-            var rain;
-            rain.src = "assets/rain.jpg";
-            var src = document.getElementById("imgW4");
-            src.appendChild(rain);
-            } else if (weather4 = "Snow") {
-            var snow;
-            snow.src = "assets/snow.jpg";
-            var src = document.getElementById("imgW4");
-            src.appendChild(snow);
-            } else {
-            var clear;
-            clear.src = "assets/sun.jpg";
-            var src = document.getElementById("imgW4");
-            src.appendChild(snow);
-            }
+            if (weather4 == "Clouds") {
+                var item = document.getElementById("imgW4");
+                item.setAttribute("src", "assets/cloud.jpg")
+        } else if (weather4 == "Rain") {
+            var item = document.getElementById("imgW4");
+            item.setAttribute("src", "assets/rain.jpg")
+        } else if (weather4 == "Snow") {
+            var item = document.getElementById("imgW4");
+            item.setAttribute("src", "assets/snow.jpg")
+        } else {
+            var item = document.getElementById("imgW4");
+            item.setAttribute("src", "assets/sun.jpg")
+        }
+
 
             var weather5=data.daily[3].weather.main;
-                if (weather5 = "Clouds") {
-            var cloud;
-            cloud.src = "assets/cloud.jpg";
-            var src = document.getElementById("imgW5");
-            src.appendChild(cloud);
-            } else if (weather5 = "Rain") {
-            var rain;
-            rain.src = "assets/rain.jpg";
-            var src = document.getElementById("imgW5");
-            src.appendChild(rain);
-            } else if (weather5 = "Snow") {
-            var snow;
-            snow.src = "assets/snow.jpg";
-            var src = document.getElementById("imgW5");
-            src.appendChild(snow);
-            } else {
-            var clear;
-            clear.src = "assets/sun.jpg";
-            var src = document.getElementById("imgW5");
-            src.appendChild(snow);
-            }
+            if (weather5 == "Clouds") {
+                var item = document.getElementById("imgW5");
+                item.setAttribute("src", "assets/cloud.jpg")
+        } else if (weather5 == "Rain") {
+            var item = document.getElementById("imgW5");
+            item.setAttribute("src", "assets/rain.jpg")
+        } else if (weather5 == "Snow") {
+            var item = document.getElementById("imgW5");
+            item.setAttribute("src", "assets/snow.jpg")
+        } else {
+            var item = document.getElementById("imgW5");
+            item.setAttribute("src", "assets/sun.jpg")
+        }
 
-            var weather4=data.daily[4].weather.main;
-                if (weather6 = "Clouds") {
-            var cloud;
-            cloud.src = "assets/cloud.jpg";
-            var src = document.getElementById("imgW6");
-            src.appendChild(cloud);
-            } else if (weather6 = "Rain") {
-            var rain;
-            rain.src = "assets/rain.jpg";
-            var src = document.getElementById("imgW6");
-            src.appendChild(rain);
-            } else if (weather6 = "Snow") {
-            var snow;
-            snow.src = "assets/snow.jpg";
-            var src = document.getElementById("imgW6");
-            src.appendChild(snow);
-            } else {
-            var clear;
-            clear.src = "assets/sun.jpg";
-            var src = document.getElementById("imgW6");
-            src.appendChild(snow);
-            }
+
+            var weather6=data.daily[4].weather.main;
+            if (weather6 == "Clouds") {
+                var item = document.getElementById("imgW6");
+                item.setAttribute("src", "assets/cloud.jpg")
+        } else if (weather6 == "Rain") {
+            var item = document.getElementById("imgW6");
+            item.setAttribute("src", "assets/rain.jpg")
+        } else if (weather6 == "Snow") {
+            var item = document.getElementById("imgW6");
+            item.setAttribute("src", "assets/snow.jpg")
+        } else {
+            var item = document.getElementById("imgW6");
+            item.setAttribute("src", "assets/sun.jpg")
+        }
+
 
 
 
