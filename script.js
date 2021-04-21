@@ -6,10 +6,11 @@
 var storageArray = []
 storageArray= JSON.parse(localStorage.getItem("history"))
 if (localStorage.getItem("history") == null) {
-    
+    storageArray = []
 } else {
-
+    storageArray = []
 }
+console.log(storageArray)
 var cityListEl = $("#list-group");
 for (var i = 0; i < storageArray.length; i++) {
     var cityListItemEl = $(
