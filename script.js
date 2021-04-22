@@ -56,7 +56,7 @@ function showInput(cityName) {
     } else {
         document.getElementById("cityName").innerText=cityName;
 
-        var requestUrl="http://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid="+API_KEY+"";
+        var requestUrl="https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid="+API_KEY+"";
 
         fetch(requestUrl).then(function(response) {
             if(!response.ok) {
